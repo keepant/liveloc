@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "725385588712",
+    "firebase_url": "https://liveloc-d29df.firebaseio.com",
+    "project_id": "liveloc-d29df",
+    "storage_bucket": "liveloc-d29df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725385588712:android:b458603ea85bbd79393e5d",
+        "android_client_info": {
+          "package_name": "com.keepant.liveloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725385588712-h9uar9vrp98ovofkoh070e72o554srld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keepant.liveloc",
+            "certificate_hash": "462d9de0054101503f94dec8e0334e59f161c74f"
+          }
+        },
+        {
+          "client_id": "725385588712-qk6eq8t7b14cd32hg5vljjjog3uips4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSvL2pZpL0LbH6SK4jXl-A2ne31QAmwN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725385588712-qk6eq8t7b14cd32hg5vljjjog3uips4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
