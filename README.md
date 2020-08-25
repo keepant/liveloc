@@ -1,3 +1,3 @@
 # liveloc
 
-## FLutter live location save in Firebase Realtime Database.
+## Flutter live location save in Firebase Realtime Database.
