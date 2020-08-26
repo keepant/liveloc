@@ -2,8 +2,14 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:liveloc/services/db_helper.dart';
 
-class ListUser extends StatelessWidget {
+class ListUser extends StatefulWidget {
+  @override
+  _ListUserState createState() => _ListUserState();
+}
+
+class _ListUserState extends State<ListUser> {
   List<Map<dynamic, dynamic>> lists = [];
+
   final dbHelper = new DBHelper();
 
   @override

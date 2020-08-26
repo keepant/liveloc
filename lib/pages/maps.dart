@@ -66,7 +66,7 @@ class _ShowMapsState extends State<ShowMaps> {
     });
   }
 
-  Future<void> _stopListen() async {
+  Future<void> stopListen() async {
     _locationSubscription.cancel();
   }
 

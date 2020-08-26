@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:liveloc/pages/lists_user.dart';
@@ -9,7 +8,6 @@ import 'package:liveloc/services/auth.dart';
 import 'package:liveloc/services/db_helper.dart';
 import 'package:liveloc/services/prefs.dart';
 import 'package:location/location.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class Home extends StatefulWidget {
   @override
