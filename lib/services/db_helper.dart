@@ -2,6 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 
 class DBHelper {
   final databaseReference = FirebaseDatabase.instance.reference().child('users');
+  
 
   void createUser({
     String id,
@@ -39,4 +40,5 @@ class DBHelper {
       'isLocationShare': isLocationShare,
     });
   }
+
 }

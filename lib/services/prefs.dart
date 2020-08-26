@@ -38,6 +38,11 @@ class Prefs {
     final SharedPreferences prefs = await _prefs;
     return prefs.clear();
   }
+
+  Future<bool> clearID() async {
+    final SharedPreferences prefs = await _prefs;
+    return prefs.remove('userId');
+  }
  }
 
 Prefs prefs = Prefs();

@@ -1,11 +1,15 @@
 import 'dart:async';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:liveloc/pages/lists_user.dart';
 import 'package:liveloc/pages/login/login.dart';
+import 'package:liveloc/pages/maps.dart';
 import 'package:liveloc/services/auth.dart';
 import 'package:liveloc/services/db_helper.dart';
 import 'package:liveloc/services/prefs.dart';
 import 'package:location/location.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -17,8 +21,7 @@ class _HomeState extends State<Home> {
   LocationData _locationData;
   StreamSubscription<LocationData> _locationSubscription;
   final dbHelper = new DBHelper();
-
-  PermissionStatus _permissionStatus;
+  PermissionStatus _permissionStatus;  
 
   Future<void> _checkPermissions() async {
     final PermissionStatus permissionStatusResult =
@@ -79,6 +82,7 @@ class _HomeState extends State<Home> {
         automaticallyImplyLeading: false,
         title: Text('Live Location'),
         actions: [
+          IconButton(icon: Icon(Icons.list), onPressed: () => Get.to(ListUser())),
           IconButton(
             icon: Icon(Icons.exit_to_app),
             onPressed: () {
@@ -96,6 +100,7 @@ class _HomeState extends State<Home> {
                           id: id,
                           isLocationShare: false,
                         );
+                        await prefs.clearID();
                         _stopListen();
                         Get.off(LoginPage());
                         Get.snackbar(
@@ -141,6 +146,15 @@ class _HomeState extends State<Home> {
                   ),
                 ],
               ),
+      ),
+      bottomNavigationBar: Container(
+        color: Theme.of(context).primaryColor,
+        child: FlatButton(
+          onPressed: () {
+            Get.to(ShowMaps());
+          },
+          child: Text('Show on maps'),
+        ),
       ),
     );
   }
