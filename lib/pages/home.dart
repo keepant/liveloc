@@ -91,6 +91,12 @@ class _HomeState extends State<Home> {
                       onPressed: () async {
                         final auth = new Auth();
                         await auth.signOut();
+                        String id = await prefs.getUserId();
+                        dbHelper.updateShareStatus(
+                          id: id,
+                          isLocationShare: false,
+                        );
+                        _stopListen();
                         Get.off(LoginPage());
                         Get.snackbar(
                           'Logout successfully!',

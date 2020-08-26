@@ -30,4 +30,13 @@ class DBHelper {
       'longitude': longitude,
     });
   }
+
+  void updateShareStatus({
+    String id,
+    bool isLocationShare,
+  }) {
+    databaseReference.child(id).update({
+      'isLocationShare': isLocationShare,
+    });
+  }
 }
